@@ -5,6 +5,8 @@
 
 node_element_p most_expensive_buy(node_element_p first);
 
-void query(node_element_p first);
+float sum_of_all(node_element_p first);
+
+void query(node_element_p first, int flag);
 
 #endif

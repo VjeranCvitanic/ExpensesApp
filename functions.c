@@ -296,7 +296,9 @@ void print_main_menu()
     new_line();
     printf("7 -> most expensive buy");
     new_line();
-    printf("8 -> exit");
+    printf("8 -> sum of all buys");
+    new_line();
+    printf("9 -> exit");
     new_line();
 }
 

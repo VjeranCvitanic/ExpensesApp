@@ -8,11 +8,13 @@ node_element_p most_expensive_buy(node_element_p first)
     if(!temp)
         return NULL;
 
-    while(temp->next)
+    temp = temp->next;
+
+    while(temp)
     {
-        if(temp->next->price > max)
+        if(temp->price > max)
         {
-            max_element = temp->next;
+            max_element = temp;
             max = max_element->price;
         }
 
@@ -22,9 +24,39 @@ node_element_p most_expensive_buy(node_element_p first)
     return max_element;
 }
 
-void query(node_element_p first)
+float sum_of_all(node_element_p first)
 {
-    node_element_p temp = most_expensive_buy(first);
+    float sum = 0;
+    node_element_p temp = first;
+
+    if(!temp)
+        return 0;
+    
+    temp = temp->next;
+
+    while(temp)
+    {
+        sum += temp->price;
+        temp = temp->next;
+    }
+
+    return sum;
+}
+
+void query(node_element_p first, int flag)
+{
+    node_element_p temp = NULL;
+    float result = 0;
+    switch(flag)
+    {
+        case 1:
+            temp = most_expensive_buy(first);
+            break;
+        case 2:
+            result = sum_of_all(first);
+            printf("Sum is: %f\n", result);
+            break;
+    }
 
     if(temp)
         print_element(temp);

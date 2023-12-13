@@ -46,18 +46,25 @@ int do_action(int input, node_element_p first, int* info)
         case 3:
             break;
         case 4:
+        //user confirm
             save_to_file(first);
             break;
         case 5:
+        //user confirm
             read_from_file(first);
             break;
         case 6:
+        //user confirm
             delete_all(first);
             break;
         case 7:
-            query(first);
+            query(first, 1);
             break;
         case 8:
+            query(first, 2);
+            break;
+        case 9:
+        //user confirm
             *info = -1;
             break;
         default:
