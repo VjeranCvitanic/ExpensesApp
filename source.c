@@ -64,6 +64,9 @@ int do_action(int input, node_element_p first, int* info)
             query(first, 2);
             break;
         case 9:
+            query(first, 3);
+            break;
+        case 10:
         //user confirm
             *info = -1;
             break;

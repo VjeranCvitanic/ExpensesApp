@@ -298,7 +298,9 @@ void print_main_menu()
     new_line();
     printf("8 -> sum of all buys");
     new_line();
-    printf("9 -> exit");
+    printf("9 -> buys in selected time period");
+    new_line();
+    printf("10 -> exit");
     new_line();
 }
 
