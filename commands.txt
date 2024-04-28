@@ -1,1 +1,0 @@
-g++ -g -w -o source functions.c trace.c user_query.c source.c
